@@ -2,7 +2,10 @@
 
 
 //conection: 
-$link = mysqli_connect("localhost","root","","noticiasdb") or die("Error " . mysqli_error($link)); 
+$link = mysqli_connect("127.0.0.1","root","","noticiasdb", "3306")
+or die
+("Error
+ " . mysqli_error($link));
 
 $id = $_REQUEST['id'];
 
@@ -19,7 +22,7 @@ $result = mysqli_query($link, $sql);
 <!doctype html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Europeia News</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
@@ -35,7 +38,7 @@ $result = mysqli_query($link, $sql);
 
         
 
-	<header data-role="header"><h1> Primeira Aplica�ao </h1></header>
+	<header data-role="header"><h1> Primeira Aplicação </h1></header>
 	
 	
 	
