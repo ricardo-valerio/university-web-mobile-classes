@@ -1,0 +1,20 @@
+<script>
+function sucesso(pos) {
+	var lat= pos.coords.latitude;
+	var lon= pos.coords.longitude;
+	var acc= pos.coords.accuracy;
+	var alt= pos.coords.altitude;
+	var altacc= pos.coords.altitudeAccuracy;
+	alert("lat: " +lat + " lon: " + lon + " precisao:" + acc + " \naltitude:" + alt + " precisao altitude:" + altacc);
+}
+
+function erro(){
+	alert("Ocorreu um erro");
+}
+
+
+options={timeout: 60000, enableHighAccuracy: true}
+
+navigator.geolocation.getCurrentPosition( sucesso, erro, options);
+
+</script>
